@@ -9,6 +9,7 @@ body {
   font-family: "Sono", sans-serif;
   padding: 40px;
 }
+
 .header {
   margin-bottom: 40px;
 
@@ -18,7 +19,6 @@ body {
   justify-content: space-between;
 }
 .logo {
-  background-color: #172ad4;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -32,6 +32,11 @@ body {
 span {
   text-transform: uppercase;
   font-size: 14px;
+}
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
 }
 
 h1 {
@@ -47,6 +52,12 @@ h1 {
   background-color: #44403c;
   margin-bottom: 16px;
   padding: 16px 24px;
+  letter-spacing: -1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 .tag {
   text-transform: uppercase;
@@ -56,7 +67,9 @@ h1 {
   padding-left: 10px;
   padding-right: 10px;
 }
-
+.vote-buttons {
+  margin-left: auto;
+}
 ul {
   list-style: none;
 }
