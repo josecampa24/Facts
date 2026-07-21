@@ -2,12 +2,7 @@ h1 {
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
-}
-
-p_ {
-  font-size: 20px;
-  line-height: 1.4;
-  font-family: sans-serif;
+  font-family: "Sono", sans-serif;
 }
 
 span {
@@ -16,4 +11,15 @@ span {
 }
 ul {
   list-style: none;
+}
+
+.fact {
+  font-family: "Sono", sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: sans-serif, Arial;
 }
