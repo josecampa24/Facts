@@ -7,9 +7,12 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: "Sono", sans-serif;
-  padding: 40px;
+  padding: 48px 64px;
 }
-
+.container {
+  max-width: 100px;
+  margin: 0 auto;
+}
 .header {
   margin-bottom: 40px;
 
@@ -38,7 +41,10 @@ span {
   grid-template-columns: 250px 1fr;
   gap: 48px;
 }
-
+.logo img {
+  width: 68px;
+  height: 68px;
+}
 h1 {
   font-size: 42px;
   text-transform: uppercase;
@@ -72,4 +78,16 @@ h1 {
 }
 ul {
   list-style: none;
+}
+
+.source:link,
+.source:visited {
+  color: #a8a29e;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+.source:hover,
+.source:active {
+  color: #3b82f6;
 }
