@@ -10,7 +10,7 @@ body {
   padding: 48px 64px;
 }
 .container {
-  max-width: 100px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 .header {
@@ -51,7 +51,9 @@ h1 {
   font-family: "Sono", sans-serif;
   margin-top: 5px;
 }
-
+.category {
+  margin-bottom: 16px;
+}
 .fact {
   font-size: 20px;
   line-height: 1.5;
@@ -90,4 +92,32 @@ ul {
 .source:hover,
 .source:active {
   color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  border-radius: 15px;
+  font-family: "Sono", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(135deg, #0c10e9, red, green, #dcff3e);
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+}
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.btn-category {
+  width: 100%;
+  background-image: none;
 }
