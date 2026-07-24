@@ -10,9 +10,8 @@ body {
   padding: 48px 64px;
   font-weight: 600;
 }
-.container {
-  max-width: 1500px;
-  margin: 0 auto;
+.hidden {
+  display: none !important;
 }
 .header {
   margin-bottom: 40px;
@@ -173,10 +172,6 @@ ul {
 .fact-form input::placeholder {
   color: #a8a29e;
 }
-.fact-form input:first-child {
-  flex-grow: 1;
-}
-
 .fact .fact-form span {
   font-weight: 600;
   font-size: 18px;
