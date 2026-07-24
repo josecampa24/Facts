@@ -8,6 +8,7 @@ body {
   color: #fafaf9;
   font-family: "Sono", sans-serif;
   padding: 48px 64px;
+  font-weight: 600;
 }
 .container {
   max-width: 1500px;
@@ -29,7 +30,11 @@ body {
 .fact-form {
   background-color: #44403c;
   margin-bottom: 40px;
-  padding: 16px 40px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 15px;
 }
 
 span {
@@ -61,7 +66,7 @@ h1 {
   margin-bottom: 16px;
   padding: 16px 24px;
   letter-spacing: -1px;
-
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,10 +79,30 @@ h1 {
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 15px;
 }
 .vote-buttons {
   margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  gap: 8px;
 }
+.vote-buttons button {
+  border: none;
+  background-color: #57534e;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 15px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  trasnition: background-color 0.3s ease;
+}
+.vote-buttons button:hover {
+  background-color: #292524;
+}
+
 ul {
   list-style: none;
 }
@@ -104,6 +129,7 @@ ul {
   padding: 16px 0 13px;
   background-image: linear-gradient(135deg, #0c10e9, red, green, #dcff3e);
   color: inherit;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 .btn:hover {
@@ -120,4 +146,26 @@ ul {
 .btn-category {
   width: 100%;
   background-image: none;
+}
+.fact-form input,
+.fact-form select {
+  max-width: 250px;
+  background-color: #78716c;
+  border: none;
+  border-radius: 15px;
+  padding: 18px;
+  color: inherit;
+  font-family: inherit;
+}
+.fact-form input::placeholder {
+  color: #a8a29e;
+}
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact .fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
 }
