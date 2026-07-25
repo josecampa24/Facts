@@ -1,4 +1,5 @@
 const btn = document.querySelector(".btn-open");
+
 btn.addEventListener("click", function () {
   const form = document.querySelector(".fact-form");
   if (form.classList.contains("hidden")) {
