@@ -49,12 +49,28 @@ const form = document.querySelector(".fact-form");
 const factsList = document.querySelector(".facts-list");
 //Create DOM elements
 factsList.innerHTML = "";
+createFactsList(initialFacts);
+createFactList([{ text: "Lisbon is the capital of Portugal" }]);
 
-const htmlArr = initialFacts.map(
-  (fact) => `<li class="fact">${fact.text}</li>`,
-);
-console.log(htmlArr);
-factsList.insertAdjacentHTML("afterbegin", html);
+function createFactsList(dataArray) {
+  const htmlArr = dataArray.map(
+    (fact) => `<li class="fact">
+     <p>
+        ${fact.text}
+        <a
+        class="source"
+        href="${fact.source}"
+        target="_blank">
+        (Source)</a>
+       </p>
+    <span class="tag" style="background-color: #3b82f6"
+                >${fact.category}</span
+              ></li>`,
+  );
+  console.log(htmlArr);
+  const html = htmlArr.join("");
+  factsList.insertAdjacentHTML("afterbegin", html);
+}
 
 //Toggle form visibility
 btn.addEventListener("click", function () {
