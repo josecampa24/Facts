@@ -64,6 +64,9 @@ async function loadFacts() {
     },
   );
   const data = await res.json();
+  //const filteredData = data.filter(
+  //(fact) => fact.category === "society" || fact.category === "technology",
+
   createFactsList(data);
 }
 
@@ -81,7 +84,7 @@ function createFactsList(dataArray) {
         target="_blank">
         (Source)</a>
        </p>
-    <span class="tag" style="background-color: #3b82f6"
+    <span class="tag" style="background-color: ${CATEGORIES.find((cat) => cat.name === fact.category).color}"
                 >${fact.category}</span
               ></li>`,
   );
