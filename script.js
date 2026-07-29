@@ -50,18 +50,22 @@ const factsList = document.querySelector(".facts-list");
 //Create DOM elements
 factsList.innerHTML = "";
 //Load data from Supabase
-const res = fetch(
-  "https://mceyxkavrqueihhleego.supabase.co/rest/v1/facts",
-  {
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZXl4a2F2cnF1ZWloaGxlZWdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ5MjIyMjgsImV4cCI6MjEwMDQ5ODIyOH0.1TXOCXqO0_Gv8x-P2E2kokJNuMW9eUiS9IKRRDc6bC8",
-      authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZXl4a2F2cnF1ZWloaGxlZWdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ5MjIyMjgsImV4cCI6MjEwMDQ5ODIyOH0.1TXOCXqO0_Gv8x-P2E2kokJNuMW9eUiS9IKRRDc6bC8",
+loadFacts();
+async function loadFacts() {
+  const res = await fetch(
+    "https://mceyxkavrqueihhleego.supabase.co/rest/v1/facts",
+    {
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZXl4a2F2cnF1ZWloaGxlZWdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ5MjIyMjgsImV4cCI6MjEwMDQ5ODIyOH0.1TXOCXqO0_Gv8x-P2E2kokJNuMW9eUiS9IKRRDc6bC8",
+        authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZXl4a2F2cnF1ZWloaGxlZWdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ5MjIyMjgsImV4cCI6MjEwMDQ5ODIyOH0.1TXOCXqO0_Gv8x-P2E2kokJNuMW9eUiS9IKRRDc6bC8",
+      },
     },
-  },
-);
-console.log(res);
+  );
+  const data = await res.json();
+  createFactsList(data);
+}
 
 createFactsList(initialFacts);
 createFactsList([{ text: "Lisbon is the capital of Portugal" }]);
